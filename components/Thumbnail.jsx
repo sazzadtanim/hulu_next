@@ -2,24 +2,25 @@ import Image from "next/image";
 import React from "react";
 
 export default function Thumbnail({ movie }) {
-  console.log(movie);
   return (
-    <div className="p-4">
+    <div className="p-2 sm:p-2 flex flex-col">
       <Image
         src={`https://www.themoviedb.org/t/p/original${movie.poster_path}`}
         alt={movie.original_title}
         width={2000}
         height={3000}
+        className=" hover:scale-110 "
       />
-      <p className="truncate ">{movie.overview}</p>
-      <h2 className="text-3xl">{movie.title}</h2>
+      <p className="truncate text-gray-400">{movie.overview}</p>
+      <h2 className="text-3xl hover:scale-105 hover:text-bold">
+        {movie.title}
+      </h2>
 
-      {/* Minor details */}
-      <div className="flex justify-between items-end text-sm">
+      <div className="flex justify-between items-end text-sm ">
         {/* left */}
         <div>
           {/* date */}
-          <div className="flex gap-1 items-center">
+          <div className="flex gap-1 items-center text-gray-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -38,8 +39,8 @@ export default function Thumbnail({ movie }) {
         </div>
         {/* rignt */}
         <div>
-          {/* like */}
-          <div className="flex">
+          {/* rating */}
+          <div className="flex text-red-500 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

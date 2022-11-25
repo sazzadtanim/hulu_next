@@ -1,7 +1,7 @@
 export const navList = {
   genres: [
-    { id: 28, name: "Action" },
-    { id: 12, name: "Adventure" },
+    { id: 28, name: "Action" , url:"https://api.themoviedb.org/3/discover/movie?api_key=9c3ef9cbaa77b72892d9c3b4c8b66fb7&with_genres=28"},
+    { id: 12, name: "Adventure", url:"https://api.themoviedb.org/3/discover/movie?api_key=9c3ef9cbaa77b72892d9c3b4c8b66fb7&with_genres=12" },
     { id: 16, name: "Animation" },
     { id: 35, name: "Comedy" },
     { id: 80, name: "Crime" },
