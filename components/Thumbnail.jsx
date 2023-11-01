@@ -11,7 +11,7 @@ export default function Thumbnail({ movie }) {
         height={3000}
         className=" hover:scale-110 "
       />
-      <p className="truncate text-gray-400">{movie.overview}</p>
+      <p className="text-gray-400 line-clamp-3">{movie.overview}</p>
       <h2 className="text-3xl hover:scale-105 hover:text-bold">
         {movie.title}
       </h2>
